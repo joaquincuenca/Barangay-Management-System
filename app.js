@@ -3,9 +3,13 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const path = require('path');
 const mongoose = require('mongoose');
+const http = require('http');
+const socketIo = require('socket.io');
 
 // Initialize Express app
 const app = express();
+const server = http.createServer(app);
+const io = socketIo(server);
 
 // MongoDB connection
 mongoose.connect('mongodb+srv://joaquin:Q6FIRHk3mR75VbsY@cluster0.dxizzqg.mongodb.net/database?retryWrites=true&w=majority&appName=Cluster0')
@@ -67,22 +71,31 @@ app.get('/dashboard', (req, res) => {
     }
 });
 
+// Route handler for /employer
+app.get('/employer', (req, res) => {
+    res.render("employer.ejs");
+});
+
+
+
+
+
 app.post('/signup', async (req, res) => {
     const { name, lastname, username, email, password } = req.body;
     try {
         // Check if email already exists
         const existingUser = await User.findOne({ email });
         if (existingUser) {
-            return res.render('signup', { taken: "Email is already taken." });
+            return res.render('signup', { taken: "Email is already taken.", isLogin: req.session.loggedIn });
         }
 
         // If email does not exist, create a new user
         const newUser = new User({ name, lastname, username, email, password });
         await newUser.save();
-        res.render('login');
+        res.render('login', { error: null, isLogin: req.session.loggedIn });
     } catch (error) {
         console.error(error);
-        res.render('signup', { taken: "An error occurred. Please try again." });
+        res.render('signup', { taken: "An error occurred. Please try again.", isLogin: req.session.loggedIn });
     }
 });
 
@@ -111,8 +124,10 @@ app.get('/signout', (req, res) => {
     });
 });
 
+
+
 // Server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

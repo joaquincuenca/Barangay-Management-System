@@ -91,8 +91,8 @@ app.post('/login', async (req, res) => {
     try {
         const user = await User.findOne({ username, password });
         if (user) {
-            req.session.loggedIn = true;
-            res.redirect('/dashboard');
+            req.session.loggedIn =  true;
+            res.redirect('/'); // Redirects to index.ejs on successful login
         } else {
             res.render('login', { error: 'Incorrect username or password', isLogin: req.session.loggedIn });
         }

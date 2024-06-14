@@ -1,0 +1,98 @@
+body {
+    background-color: #003285;
+    color: white;
+}
+
+
+#navbarNav{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.navbar, .navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #dcdcdc !important; /* Slightly lighter color for hover effect */
+}
+
+/* Optional: Additional styling for other elements */
+h1, h2, h3, h4, h5, h6, p, a {
+    color: white;
+}
+
+.bg-blue {
+    background-color: #003285 !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+.footer {
+    background-color: #003285;
+    color: white;
+}
+
+.footer .container {
+    text-align: center;
+}
+
+.text-muted {
+    color: white !important;
+}
+
+.sk-logo {
+    max-width: 500px;
+    margin-right: 10px;
+}
+
+.text-container {
+    flex-grow: 1;
+}
+
+.mantagbac{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+}
+.text-container{
+    margin-top: 150px;
+    font-size: 20px;
+}
+
+.black{
+    color: black;
+}
+.login-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.blue{
+    color: #007bff;
+}
+
+
+.dashboard-content {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    min-height: 100vh; /* Ensures the content takes at least the full height of the viewport */
+    text-align: center; /* Optional: Centers the text within the content */
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/header') %>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body black">
+                        <ul id="messages" class="list-unstyled"></ul>
+                    </div>
+                    <div class="card-footer">
+                        <form id="form" action="">
+                            <div class="input-group ">
+                                <input id="input" autocomplete="off" class="form-control" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

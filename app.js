@@ -77,6 +77,10 @@ app.get('/employer', (req, res) => {
 });
 
 
+app.get('/employee',(req, res) =>{
+    res.render("employee.ejs");
+});
+
 
 
 

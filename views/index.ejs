@@ -10,7 +10,7 @@
             <!-- Buttons added here -->
             <div class="mt-4">
                 <a href="/employer" class="btn btn-primary mr-2">For Employer</a>
-                <a href="#" class="btn btn-secondary">For Employee</a>
+                <a href="/employee" class="btn btn-secondary">For Employee</a>
             </div>
         </div>
         <div class="col-md-6">
@@ -51,23 +51,3 @@
         }
     }
 </style>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const employerBtn = document.getElementById('employerBtn');
-
-        employerBtn.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
-
-            // Show a confirmation dialog
-            const confirmed = confirm('Are you an employer?');
-            if (confirmed) {
-                // If confirmed, redirect to the employer page or handle accordingly
-                window.location.href = '/employer';
-            } else {
-                // Optionally, do something else if not confirmed
-            }
-        });
-    });
-</script>

@@ -1,53 +1,28 @@
 <%- include('partials/header') %>
-<div class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="row">
-        <div class="col-md-6 text-container">
-            <h2 class="mantagbac">WELCOME TO BARANGAY MANTAGBAC</h2>
-            <p>Mantagbac Daet Camarines Norte <br>
-                Open hours of barangay: Monday to Friday (8:00AM - 5:00PM) <br>
-                Email: barangaymantagbac@gmail.com</p>
-            
-            <!-- Buttons added here -->
-            <div class="mt-4">
-                <a href="/employer" class="btn btn-primary mr-2">For Employer</a>
-                <a href="/employee" class="btn btn-secondary">For Employee</a>
+<body>
+    <section>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-6 mt-5">
+                    <p class="title">WELCOME TO BARANGAY IV DAET CAMARINES NORTE</p>
+                    <div class="context">
+                        <p>Mantagbac Daet Camarines Norte</p>
+                        <p>Open hours of barangay: Monday to Friday (8:00AM - 5:00PM)</p>
+                        <p>Email: barangaymantagbac@gmail.com</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="/employer" class="btn mr-4">For Employer</a>
+                        <a href="/employee" class="btn">For Employee</a>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="/img/asset.png" class="img-fluid logo">
+                </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <img src="/img/logo.png" class="img-fluid logo">
-        </div>
-    </div>
-</div>
+    </section>
 
-<%- include('partials/footer') %>
-
-<style>
-    .logo {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .text-container {
-        margin-top: 50px; /* Default margin top */
-    }
-
-    @media (max-width: 768px) {
-        .logo {
-            max-width: 80%;
-        }
-
-        .text-container {
-            margin-top: 30px; /* Adjusted margin top for smaller screens */
-        }
-    }
-
-    @media (max-width: 576px) {
-        .logo {
-            max-width: 70%;
-        }
-
-        .text-container {
-            margin-top: 20px; /* Further adjustment for even smaller screens */
-        }
-    }
-</style>
+    <section>
+    
+    </section>
+</body>

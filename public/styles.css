@@ -1,81 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+header {
+    background-color: #4992B1;
+}
+
 body {
-    background-color: #003285;
-    color: white;
+    background-color: #DAEBFE;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
 }
 
 
-#navbarNav{
-    font-size: 20px;
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Adjust the value as needed */
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0; /* No margin for the last item */
+}
+
+.title {
+    font-size: 42px;
     font-weight: bold;
+    color: #676767;
+    line-height: 55px;
 }
 
-
-.navbar, .navbar-brand, .nav-link {
-    color: white !important;
+.context {
+    color: #676767;
+    font-size: 16px;
 }
 
-.nav-link:hover {
-    color: #dcdcdc !important; /* Slightly lighter color for hover effect */
-}
-
-/* Optional: Additional styling for other elements */
-h1, h2, h3, h4, h5, h6, p, a {
+.btn {
     color: white;
-}
-
-.bg-blue {
-    background-color: #003285 !important;
-}
-
-.text-white {
-    color: white !important;
-}
-
-.navbar-toggler {
-    border-color: white;
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-color: #4992B1;
+    align-items: center;
+    width: 180px;
+    height: 45px;
+    display: inline-flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 10px;
 }
 
 
 .footer {
-    background-color: #003285;
+    background-color: #4992B1;
     color: white;
-}
-
-.footer .container {
     text-align: center;
 }
 
-.text-muted {
-    color: white !important;
-}
-
-.sk-logo {
-    max-width: 500px;
-    margin-right: 10px;
-}
-
-.text-container {
-    flex-grow: 1;
-}
-
-.mantagbac{
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 40px;
-}
-.text-container{
-    margin-top: 150px;
-    font-size: 20px;
-}
-
-.black{
-    color: black;
-}
 .login-box {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -84,16 +60,36 @@ h1, h2, h3, h4, h5, h6, p, a {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.blue{
-    color: #007bff;
+
+.bg-color{
+    background-color: white;
 }
 
 
-.dashboard-content {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    min-height: 100vh; /* Ensures the content takes at least the full height of the viewport */
-    text-align: center; /* Optional: Centers the text within the content */
-}
 
+
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+    .title {
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .context {
+        font-size: 14px;
+        text-align: center;
+    }
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .col-md-6 {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
